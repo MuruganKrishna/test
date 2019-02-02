@@ -1,0 +1,32 @@
+<%= form_with(model: assert, local: true) do |form| %>
+  <% if assert.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(assert.errors.count, "error") %> prohibited this assert from being saved:</h2>
+
+      <ul>
+      <% assert.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :equipment_name %>
+    <%= form.text_field :equipment_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :equipment_price %>
+    <%= form.number_field :equipment_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_detail_id %>
+    <%= form.text_field :company_detail_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

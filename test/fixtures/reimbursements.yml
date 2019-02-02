@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  purpose: MyString
+  cost: 1
+  employee: one
+
+two:
+  purpose: MyString
+  cost: 1
+  employee: two

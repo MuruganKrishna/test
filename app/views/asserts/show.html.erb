@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Equipment name:</strong>
+  <%= @assert.equipment_name %>
+</p>
+
+<p>
+  <strong>Equipment price:</strong>
+  <%= @assert.equipment_price %>
+</p>
+
+<p>
+  <strong>Company detail:</strong>
+  <%= @assert.company_detail %>
+</p>
+
+<%= link_to 'Edit', edit_assert_path(@assert) %> |
+<%= link_to 'Back', asserts_path %>

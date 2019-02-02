@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  equipment_name: MyString
+  equipment_price: 1
+  company_detail: one
+
+two:
+  equipment_name: MyString
+  equipment_price: 1
+  company_detail: two

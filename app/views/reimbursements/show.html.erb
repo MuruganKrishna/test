@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Purpose:</strong>
+  <%= @reimbursement.purpose %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @reimbursement.cost %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @reimbursement.employee %>
+</p>
+
+<%= link_to 'Edit', edit_reimbursement_path(@reimbursement) %> |
+<%= link_to 'Back', reimbursements_path %>

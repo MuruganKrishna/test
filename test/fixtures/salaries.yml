@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  actual_salary: 1
+  current_salary: 1
+  employee: one
+
+two:
+  actual_salary: 1
+  current_salary: 1
+  employee: two

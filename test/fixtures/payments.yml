@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nameofinvest: MyString
+  cost: 1
+  company_detail: one
+
+two:
+  nameofinvest: MyString
+  cost: 1
+  company_detail: two
