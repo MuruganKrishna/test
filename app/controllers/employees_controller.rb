@@ -13,9 +13,11 @@ class EmployeesController < ApplicationController
   end
 
   # GET /employees/new
-  def new
-    @employee = Employee.new
-  end
+  #///////////
+  # def new
+  #   @employee = Employee.new
+  # end
+  #////////////////
 
   # GET /employees/1/edit
   def edit
