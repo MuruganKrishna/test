@@ -7,7 +7,7 @@ class EmployeesController < ApplicationController
     @employees = Employee.all
   end
   def change
-
+  @emp=Employee.all
   end
   # GET /employees/1
   # GET /employees/1.json
