@@ -12,64 +12,70 @@
 
 ActiveRecord::Schema.define(version: 2019_01_21_184604) do
 
-  create_table "asserts", force: :cascade do |t|
+  create_table "asserts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "equipment_name"
     t.integer "equipment_price"
-    t.integer "company_detail_id"
+    t.bigint "company_detail_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_detail_id"], name: "index_asserts_on_company_detail_id"
   end
 
-  create_table "attendances", force: :cascade do |t|
+  create_table "attendances", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "leave"
-    t.integer "employee_id"
+    t.bigint "employee_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["employee_id"], name: "index_attendances_on_employee_id"
   end
 
-  create_table "company_details", force: :cascade do |t|
+  create_table "company_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "employees", force: :cascade do |t|
+  create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "designation"
-    t.integer "company_detail_id"
+    t.bigint "company_detail_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_detail_id"], name: "index_employees_on_company_detail_id"
   end
 
-  create_table "payments", force: :cascade do |t|
+  create_table "payments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nameofinvest"
     t.integer "cost"
-    t.integer "company_detail_id"
+    t.bigint "company_detail_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_detail_id"], name: "index_payments_on_company_detail_id"
   end
 
-  create_table "reimbursements", force: :cascade do |t|
+  create_table "reimbursements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "purpose"
     t.integer "cost"
-    t.integer "employee_id"
+    t.bigint "employee_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["employee_id"], name: "index_reimbursements_on_employee_id"
   end
 
-  create_table "salaries", force: :cascade do |t|
+  create_table "salaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "actual_salary"
     t.integer "current_salary"
-    t.integer "employee_id"
+    t.bigint "employee_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["employee_id"], name: "index_salaries_on_employee_id"
   end
 
+  add_foreign_key "asserts", "company_details"
+  add_foreign_key "attendances", "employees"
+  add_foreign_key "employees", "company_details"
+  add_foreign_key "payments", "company_details"
+  add_foreign_key "reimbursements", "employees"
+  add_foreign_key "salaries", "employees"
 end
