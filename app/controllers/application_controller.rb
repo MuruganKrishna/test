@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
 def int
-        puts"dfjaskfhjkds"
+        puts"dfjaskf"
 end
 end
