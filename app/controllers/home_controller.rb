@@ -1,3 +1,3 @@
 class HomeController < ApplicationController
-  scope :query,->{Assert.all}
+  # scope :query,->{Assert.all}
 end
